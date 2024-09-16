@@ -20,7 +20,7 @@ public class Condor : Oiseau
 }
 ```
 
-Je connais la notion abordée ici, c'est un "lazy singleton"
+Je connais la notion abordée ici, c'est un singleton et plus particlièrement "lazy singleton" avec le pattern "double check locking".  Le framework a proposé depuis le type Lazy<T>.
 
 ## Heritage porté
 
@@ -223,3 +223,20 @@ public class StringTest
 
 ## Max divisor commun
 
+```csharp
+public class MathHelper
+{
+    public int MaxDivisor(int firstNumber, int secondNumber)
+    {
+        firstNumber = Math.Abs(firstNumber);
+        secondNumber = Math.Abs(secondNumber);
+        while (secondNumber != 0)
+        {
+            int remainder = firstNumber % secondNumber;
+            firstNumber = secondNumber;
+            secondNumber = remainder;
+        }
+        return firstNumber;
+    }
+}
+```
