@@ -154,7 +154,7 @@ Lancer une exception :
 ```csharp
 object o1 = new object();
 object o2 = new object();
-console.writeline($'{o1==o2},{o1.Equals(o2)});
+console.writeline($'{o1==o2},{o1.Equals(o2)}');
 ```
 
 Cela affiche "false,false" car l'opérateur == et la méthode Equals comparent les références qui sont différentes.    
