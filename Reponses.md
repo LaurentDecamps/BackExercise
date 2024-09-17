@@ -169,6 +169,8 @@ C'est le mot clef "new" qui permet de redéfinir une méthode hérité.
 
 ## Internal
 
+Internal donne un accès à la visibilité au niveau de l'assembly. 
+
 # Code
 
 ## Interfaces
